@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* General container styles */
+.app-container {
+  font-family:'Courier New', Courier, monospace;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  background: linear-gradient(#3b7f8d,#6598a181);
 }
 
-.App-link {
-  color: #61dafb;
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.slider-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+
+.country-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75%; /* Fixed size for the flag container */
+  height: 400px; /* Fixed size for the flag container */
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 1px solid;
+  padding: 20px;
+}
+
+.flag-image {
+  width: 300px;
+  height: 250px;
+  overflow: hidden;
+  border: 1px solid lightgray;
+}
+
+.details-button {
+  background-color: #cdaa59;
+  border-radius: 10px;
+  width: 160px;
+  height: 100px;
+  font-size: 1.2em;
+  color: black;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+.modal-content::-webkit-scrollbar{
+  display: none;
+}
+.modal-content {
+  background-color: #f1d9a0;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 80%;
+  height: 550px;
+  overflow: scroll;
+  position: relative;
+}
+.close-button {
+  font-size: 2rem;
+  color: #ff0000;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.logo-container{
+  display: flex;
+  width: 100%;
+  margin-top: -40px;
+}
+.logo-container img{
+  width: 170px;
+  height: 170px;
+}
+
+.logo-container h1{
+  color:#cdaa59;
+  margin-left: 140px;
+  margin-top: 70px;
 }
